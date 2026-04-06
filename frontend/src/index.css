@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { height: 100%; }
+
+:root {
+  --primary:      #4f46e5;
+  --primary-bg:   #eff0fe;
+  --border:       #e2e8f0;
+  --bg:           #f7f8fa;
+  --surface:      #ffffff;
+  --text-1:       #111827;
+  --text-2:       #6b7280;
+  --text-3:       #9ca3af;
+  --green:        #059669;
+  --green-bg:     #d1fae5;
+  --green-text:   #065f46;
+  --yellow:       #d97706;
+  --yellow-bg:    #fef3c7;
+  --yellow-text:  #92400e;
+  --red:          #dc2626;
+  --red-bg:       #fee2e2;
+  --red-text:     #991b1b;
+  --blue:         #2563eb;
+  --blue-bg:      #eff6ff;
+  --blue-text:    #1d4ed8;
+  --shadow-sm:    0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:    0 4px 12px rgba(0,0,0,.08);
+  --r:            10px;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-1);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+body { min-height: 100%; background: var(--bg); }
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 { font-weight: 700; line-height: 1.25; color: var(--text-1); }
+p { color: var(--text-2); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .4; }
+}
+
+/* ── Auth pages (login / register) ── */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--bg);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 2.25rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow-sm);
+  animation: fadeUp .35s ease both;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-1);
+  letter-spacing: -0.02em;
+  margin-bottom: .3rem;
+}
+
+.sub {
+  font-size: .875rem;
+  color: var(--text-2);
+  margin-bottom: 1.6rem;
+}
+
+.form { display: flex; flex-direction: column; }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: .35rem;
+  letter-spacing: .01em;
+}
+
+.input {
+  padding: .6rem .85rem;
+  font-size: .9rem;
+  font-family: inherit;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  color: var(--text-1);
+  background: #fafbfc;
+  transition: border-color .15s, box-shadow .15s;
+}
+.input::placeholder { color: var(--text-3); }
+.input:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(79,70,229,.12);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  font-size: .8rem;
+  color: var(--text-2);
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+}
+.remember input[type="checkbox"] { accent-color: var(--primary); }
+
+.btn {
+  width: 100%;
+  padding: .65rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity .15s, transform .1s;
+}
+.btn:hover:not(:disabled) { opacity: .88; transform: translateY(-1px); }
+.btn:active:not(:disabled) { transform: none; }
+.btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.link:hover { opacity: .8; }
+
+.footer {
+  text-align: center;
+  font-size: .8rem;
+  color: var(--text-2);
+  margin-top: 1.25rem;
+}
+
+.error {
+  background: var(--red-bg);
+  color: var(--red-text);
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: .55rem .85rem;
+  font-size: .82rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.success {
+  text-align: center;
+  color: var(--green-text);
+  font-weight: 600;
+  padding: 1.5rem 0;
+}
