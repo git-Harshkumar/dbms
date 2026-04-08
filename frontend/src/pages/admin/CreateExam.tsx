@@ -202,11 +202,11 @@ const CreateExam: React.FC = () => {
             </div>
             <div style={s.row}>
               <div style={s.field}>
-                <label style={s.label}>Starts At *</label>
+                <label style={s.label}>Starts At </label>
                 <input style={s.input} type="datetime-local" value={examForm.starts_at} onChange={e => setExamForm(f => ({ ...f, starts_at: e.target.value }))} required />
               </div>
               <div style={s.field}>
-                <label style={s.label}>Ends At *</label>
+                <label style={s.label}>Ends At </label>
                 <input style={s.input} type="datetime-local" value={examForm.ends_at} onChange={e => setExamForm(f => ({ ...f, ends_at: e.target.value }))} required />
               </div>
             </div>
@@ -236,7 +236,7 @@ const CreateExam: React.FC = () => {
           </div>
 
           <div style={s.field}>
-            <label style={s.label}>Question Text *</label>
+            <label style={s.label}>Question Text </label>
             <textarea
               style={{ ...s.input, resize: 'vertical', minHeight: 60 }}
               value={q.content}
@@ -277,7 +277,7 @@ const CreateExam: React.FC = () => {
       <div style={s.actions}>
         <button style={s.btnOutline} onClick={() => setStep(1)}>← Back</button>
         <button style={s.btnPrimary} onClick={handleSaveQuestions} disabled={submitting}>
-          {submitting ? 'Saving…' : '✓ Save & Finish'}
+          {submitting ? 'Saving…' : ' Save & Finish'}
         </button>
       </div>
     </div>

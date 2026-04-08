@@ -185,7 +185,7 @@ const AttemptExam = () => {
   </div>
 
   <div style="text-align:center">
-    <div class="badge">${pass ? '🎉 PASSED' : '❌ FAILED'}</div>
+    <div class="badge">${pass ? ' PASSED' : ' FAILED'}</div>
   </div>
 
   <div class="score-box">
@@ -249,7 +249,7 @@ const AttemptExam = () => {
             <>
               <div style={{ ...rs.pctBig, color }}>{resultDetail?.percentage ?? '—'}%</div>
               <div style={{ ...rs.badge, background: bg, color }}>
-                {pass ? '🎉 You Passed!' : '❌ Better luck next time'}
+                {pass ? ' You Passed!' : ' Better luck next time'}
               </div>
               <div style={rs.statsRow}>
                 <div style={rs.statBox}>
@@ -429,7 +429,7 @@ const AttemptExam = () => {
               </button>
             ) : (
               <button style={s.btnSubmit} onClick={() => handleSubmit(false)} disabled={submitting}>
-                {submitting ? 'Submitting…' : '✓ Submit Exam'}
+                {submitting ? 'Submitting…' : ' Submit Exam'}
               </button>
             )}
           </div>

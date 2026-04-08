@@ -111,7 +111,7 @@ const ExamResultDetailView: FC<ExamResultDetailViewProps> = ({
   <div class="score-hero">
     <div class="score-pct">${result.percentage}%</div>
     <div class="score-label">Overall Score</div>
-    <div class="badge">${pass ? '🎉 PASSED' : '❌ FAILED'}</div>
+    <div class="badge">${pass ? ' PASSED' : ' FAILED'}</div>
   </div>
   <div class="stats">
     <div class="stat">
@@ -186,7 +186,7 @@ const ExamResultDetailView: FC<ExamResultDetailViewProps> = ({
         </div>
 
         <div style={{ ...s.badge, background: bg, color }}>
-          {pass ? '🎉 Congratulations — You Passed!' : '❌ You Failed — Keep Practicing!'}
+          {pass ? ' Congratulations — You Passed!' : ' You Failed — Keep Practicing!'}
         </div>
 
         <div style={s.statsRow}>
@@ -212,13 +212,13 @@ const ExamResultDetailView: FC<ExamResultDetailViewProps> = ({
 
         <div style={s.btnRow}>
           <button type="button" style={s.btnDownload} onClick={downloadReport}>
-            ⬇ Download Result Report (PDF)
+             Download Result Report (PDF)
           </button>
           <button type="button" style={s.btnSecondary} onClick={onAllResults}>
-            📊 All My Results
+             All My Results
           </button>
           <button type="button" style={s.btnOutline} onClick={onDashboard}>
-            🏠 Dashboard
+             Dashboard
           </button>
         </div>
 
@@ -228,7 +228,7 @@ const ExamResultDetailView: FC<ExamResultDetailViewProps> = ({
       </div>
 
       <div style={s.sheetCard}>
-        <h2 style={s.sheetTitle}>📋 Answer Sheet</h2>
+        <h2 style={s.sheetTitle}> Answer Sheet</h2>
         <p style={s.sheetSub}>Review each question — correct answers are highlighted in green.</p>
 
         <div style={s.questionList}>
@@ -296,7 +296,7 @@ const ExamResultDetailView: FC<ExamResultDetailViewProps> = ({
 
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
           <button type="button" style={s.btnDownload} onClick={downloadReport}>
-            ⬇ Download Full Report & Answer Sheet (PDF)
+             Download Full Report & Answer Sheet (PDF)
           </button>
         </div>
       </div>
