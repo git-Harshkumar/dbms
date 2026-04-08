@@ -111,8 +111,8 @@ const StudentDashboard = () => {
               {/* Middle: meta + date */}
               <div style={s.metaRow}>
                 <span style={s.meta}>⏱ {exam.duration_mins} min</span>
-                <span style={s.meta}>📝 {exam.total_questions} questions</span>
-                <span style={s.meta}>⭐ {exam.total_marks} marks</span>
+                <span style={s.meta}> {exam.total_questions} questions</span>
+                <span style={s.meta}> {exam.total_marks} marks</span>
                 <span style={s.dateText}>Closes: {new Date(exam.ends_at).toLocaleString()}</span>
               </div>
 

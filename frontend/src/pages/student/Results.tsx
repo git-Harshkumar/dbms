@@ -63,7 +63,7 @@ const Results = () => {
 
   return (
     <div style={s.page}>
-      <button style={s.back} onClick={() => navigate('/student')}>← Back to Dashboard</button>
+      <button style={s.back} onClick={() => navigate('/student')}> Back to Dashboard</button>
       <h1 style={s.title}>My Results</h1>
 
       {loading && <p style={s.info}>Loading results…</p>}
