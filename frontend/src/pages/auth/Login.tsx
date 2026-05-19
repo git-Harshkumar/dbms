@@ -18,8 +18,8 @@ export default function Login() {
     setError('');
     setLoading(true);
     try {
-      const user = await login(email.trim(), password);
-      navigate(user.role === 'admin' ? '/admin' : '/student', { replace: true });
+      await login(email.trim(), password);
+      navigate('/', { replace: true }); // HomeRedirect reads updated auth state and routes by role
     } catch (err: unknown) {
       if (axios.isAxiosError(err)) {
         if (!err.response) {

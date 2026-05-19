@@ -21,8 +21,8 @@ export default function Register() {
     setError('');
     setLoading(true);
     try {
-      const user = await register(name, email, password, role);
-      navigate(user.role === 'admin' ? '/admin' : '/student', { replace: true });
+      await register(name, email, password, role);
+      navigate('/', { replace: true }); // HomeRedirect will pick up the new auth state and route correctly
     } catch (err: unknown) {
       if (axios.isAxiosError(err)) {
         const msg = err.response?.data?.message;
